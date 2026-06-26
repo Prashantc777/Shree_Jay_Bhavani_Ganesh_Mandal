@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+<defs>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#F8E08E"/>
+<stop offset="50%" stop-color="#E0B84D"/>
+<stop offset="100%" stop-color="#B8860B"/>
+</linearGradient>
+<filter id="g"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<circle cx="512" cy="512" r="430" fill="none" stroke="url(#gold)" stroke-width="14"/>
+<circle cx="512" cy="512" r="396" fill="none" stroke="url(#gold)" stroke-width="5"/>
+<g stroke="url(#gold)" stroke-width="3" fill="none">
+<path d="M442 140 C462 110 482 110 512 140 C542 110 562 110 582 140"/>
+<path d="M884 442 C914 462 914 482 884 512 C914 542 914 562 884 582"/>
+<path d="M582 884 C562 914 542 914 512 884 C482 914 462 914 442 884"/>
+<path d="M140 582 C110 562 110 542 140 512 C110 482 110 462 140 442"/>
+</g>
+<text x="512" y="620" text-anchor="middle" font-size="430"
+font-family="Noto Serif Devanagari, DejaVu Serif, serif"
+fill="url(#gold)" filter="url(#g)">ॐ</text>
+<path d="M512 205 C500 170 500 150 512 130 C524 150 524 170 512 205Z"
+fill="#F57C00" stroke="url(#gold)" stroke-width="2"/>
+</svg>

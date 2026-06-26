@@ -1,0 +1,768 @@
+/* ===================================================
+   PROJECT SHREEGANESH
+   Global Styles
+=================================================== */
+
+/* ==========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================
+   Smooth Scroll
+========================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* ==========================
+   Body
+========================== */
+
+body{
+
+    font-family:var(--font-primary);
+
+    background:var(--background-color);
+
+    color:var(--text-color);
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================
+   Images
+========================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ==========================
+   Links
+========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ==========================
+   Lists
+========================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+/* ==========================
+   Container
+========================== */
+
+.container{
+
+    width: min(90%, var(--container-width));
+
+    margin: 0 auto;
+
+}
+/* ===================================================
+   TOP INFORMATION BAR
+=================================================== */
+
+#top-bar{
+
+    position: relative;
+
+    width: 100%;
+
+    height: var(--topbar-height);
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            rgba(55, 0, 0, 0.35),
+            rgba(95, 0, 0, 0.30)
+        ),
+        url("/assets/images/backgrounds/top-bar-bg.webp");
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+}
+
+/* ==========================================
+   Premium Top Border
+========================================== */
+
+#top-bar::after{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 24px;
+
+    background: url("/assets/images/decorations/vcr-border-premium.png");
+
+    background-repeat: repeat-x;
+
+    background-size: auto 24px;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+}
+
+#top-bar::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,175,55,.18),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+}
+
+.top-bar-wrapper{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ==========================================
+   Premium Bottom Border
+========================================== */
+
+.top-bar-bottom-border{
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 24px;
+
+    background: url("/assets/images/decorations/vcr-border-premium.png");
+
+    background-repeat: repeat-x;
+
+    background-size: auto 24px;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+}
+/* ==========================================
+   Premium Toran
+========================================== */
+
+.top-toran{
+    position:absolute;
+    top:20px;
+    left:0;
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:0;
+}
+
+.top-toran img{
+    width:33.33%;
+    height:auto;
+    display:block;
+}
+
+
+/* ==========================================
+   Hanging Brass Bells
+========================================== */
+
+.hanging-bells{
+
+    position:absolute;
+
+    top:55px;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:18;
+
+}
+
+/* Common */
+
+.bell{
+
+    position:absolute;
+
+    width:85px;
+
+    height:auto;
+
+    filter:drop-shadow(0 4px 8px rgba(0,0,0,.25));
+
+}
+
+/* Left */
+
+.bell-left{
+
+    left:70px;
+
+}
+
+/* Right */
+
+.bell-right{
+
+    right:70px;
+
+}
+
+
+/* ==========================================
+   Left Header Logo
+========================================== */
+.header-logo-left{
+
+    position:absolute;
+
+    left:40px;
+
+    top:135px;
+
+    transform:translateY(-50%);
+
+    z-index:30;
+
+}
+.header-logo-left img{
+
+    width:190px;
+
+    height:auto;
+
+    display:block;
+
+    filter:drop-shadow(0 6px 12px rgba(0,0,0,.25));
+
+    transition:var(--transition);
+
+}
+
+.header-logo-left img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================================
+   Right Header Logo
+========================================== */
+
+.header-logo-right{
+
+    position:absolute;
+
+    right:40px;
+
+    top:95px;
+    
+    transform:translateY(-50%);
+
+    z-index:30;
+
+}
+
+.header-logo-right img{
+
+    width:205px;
+
+    height:auto;
+
+    display:block;
+
+    filter:drop-shadow(0 6px 12px rgba(0,0,0,.25));
+
+    transition:var(--transition);
+
+}
+
+.header-logo-right img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================================
+   Mandal Heading
+========================================== */
+
+.top-center{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+/* Main Heading */
+
+.mandal-heading h1{
+
+    font-family:var(--font-heading);
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#FFD700;
+
+    line-height:1.1;
+
+    text-shadow:0 3px 8px rgba(0,0,0,.35);
+
+}
+
+/* Mandal Name */
+
+.mandal-heading h2{
+
+    font-family:var(--font-heading);
+
+    font-size:28px;
+
+    font-weight:600;
+
+    color:#FFF8E7;
+
+    margin-top:6px;
+
+    line-height:1.2;
+
+}
+
+/* Established */
+
+.established{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:10px;
+
+}
+
+.established p{
+
+    font-family:var(--font-devanagari);
+
+    font-size:16px;
+
+    color:whitesmoke;
+
+    letter-spacing:1px;
+
+}
+
+.established span{
+
+    font-size:18px;
+
+}
+
+
+@keyframes bellSwing{
+
+    0%{
+        transform:rotate(0deg);
+    }
+
+    25%{
+        transform:rotate(3deg);
+    }
+
+    50%{
+        transform:rotate(0deg);
+    }
+
+    75%{
+        transform:rotate(-3deg);
+    }
+
+    100%{
+        transform:rotate(0deg);
+    }
+
+}
+
+/* ===================================================
+   Official Information Strip
+=================================================== */
+
+#official-info{
+
+    background:#FFF8E7;
+
+    border-bottom:2px solid #D4AF37;
+
+    padding:6px 0;
+
+}
+
+/* Registration */
+
+.registration-row{
+
+    display:flex;
+
+    font-size: 16px;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+.language-panel{
+
+    position:absolute;
+
+    right:100px;
+
+    top:225px;      /* adjust between 90-110px */
+
+    z-index:40;
+
+}
+
+.language-title{
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:#7B1E1E;
+
+    letter-spacing:1px;
+
+    margin-bottom:4px;
+
+}
+
+.lang-btn{
+
+    padding:4px 12px;
+
+    background:#fff;
+
+    border:1px solid #D4AF37;
+
+    border-radius:18px;
+
+    color:#7B1E1E;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.lang-btn:hover{
+
+    background:#D4AF37;
+
+    color: #fff;
+
+}
+
+.lang-btn.active{
+
+    background:#D4AF37;
+
+    color:#fff;
+
+}
+
+.mandal-name{
+
+    font-family:var(--font-devanagari);
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#7B1E1E;
+
+}
+
+.registration-no{
+
+    font-family:var(--font-devanagari);
+
+    font-size:18px;
+
+    color:#C69214;
+
+    font-weight:700;
+
+}
+
+.separator{
+
+    color:#D4AF37;
+
+    font-weight:bold;
+
+}
+
+/* Address */
+
+.address-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:10px;
+
+    font-family:var(--font-devanagari);
+
+    font-size:17px;
+
+    color:#5C2B00;
+
+}
+.award{
+
+    color:#C69214;
+
+    font-size: 18px;
+
+    font-weight:700;
+
+    font-family:var(--font-devanagari);
+
+}
+
+/* Icons */
+
+.flag,
+.location{
+
+    font-size:22px;
+
+}
+
+/* ==========================================
+   Premium Running Devotional Ticker
+========================================== */
+
+.ticker-wrapper{
+
+    width:100%;
+
+    overflow:hidden;
+
+    background:#FFF8E7;
+
+    border-top:1px solid rgba(212,175,55,.35);
+
+    border-bottom:1px solid rgba(212,175,55,.35);
+
+    padding:8px 0;
+
+}
+
+.ticker{
+
+    display:flex;
+
+    width:max-content;
+
+    animation:tickerMove 25s linear infinite;
+
+}
+
+.ticker span{
+
+    flex-shrink:0;
+
+    white-space:nowrap;
+
+    padding-right:80px;
+
+    font-family:var(--font-devanagari);
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#7B1E1E;
+
+    letter-spacing:.5px;
+
+}
+
+@keyframes tickerMove{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+.festival-countdown{
+
+    position:fixed;
+
+    left:200px;
+
+    top:220px;
+
+    width:160px;
+
+    color: white;
+
+    z-index:40;
+
+}
+
+.festival-countdown h4{
+
+    color:#7B1E1E;
+
+    font-size:15px;
+
+    margin-bottom:4px;
+
+    font-family:var(--font-devanagari);
+
+}
+
+#days-left{
+
+    font-size:23px;
+
+    font-family: "Noto Sans Devanagari", sans-serif;
+
+    font-weight:650;
+
+    color:#7B1E1E;
+
+    text-shadow:0 2px 8px rgba(0,0,0,.4);
+
+    line-height:1;
+
+}
+
+.festival-countdown p{
+
+    color:#7B1E1E;
+
+    font-size:15px;
+
+    margin-top:4px;
+
+    font-family:var(--font-devanagari);
+
+}

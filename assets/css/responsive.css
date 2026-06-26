@@ -1,0 +1,33 @@
+/* ==========================================
+   Tablet & Mobile
+========================================== */
+
+@media (max-width: 768px){
+
+    .top-bar-wrapper{
+
+        flex-direction: column;
+
+        padding: 12px 0;
+
+        gap: 12px;
+
+    }
+
+    .top-center{
+
+        order: -1;
+
+        text-align: center;
+
+    }
+
+    .top-right{
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+}
